@@ -5,7 +5,7 @@ echo "welcome"
 VALIDPATTERN="^[A-Z][a-z]{2,}$"
 VALIDEMAILPATTERN="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
 VALIDMOBILENO="^((\+){1}91){1}[1-9]{1}[0-9]{9}$"
-VALIDPASSWORD="^[A-Za-z]{8,}*(.*[A-Z].*{1}+)$"
+VALIDPASSWORD="^[A-Za-z]{8,}*(.*[0-9].*{1}+)*(.*[A-Z].*{1}+)$"
 
 function patternMatching()
 {
