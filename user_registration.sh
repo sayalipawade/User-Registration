@@ -1,15 +1,30 @@
 #!/bin/bash -x
 echo "welcome"
 
-#constants
+
 VALIDPATTERN="^[A-Z][a-z]{2,}$"
+VALIDEMAILPATTERN="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
 
+function patternMatching()
+{
+   if [[ $1 =~ $2 ]]
+   then
+      echo "Valid"
+   else
+      echo "Not Valid"
+   fi
+}
+
+#checking pattern for first name
+read -p "Enter first name:" firstName
+patternMatching $firstName $VALIDPATTERN
+
+#checking pattern for last name
 read -p "Enter last name:" lastName
+patternMatching $lastName $VALIDPATTERN
 
-if [[ $lastName =~ $VALIDPATTERN ]]
-then
-	echo "Valid last name"
-else
-	echo "Not valid last name"
-fi
+#checking pattern for email
+read -p "Enter email Id:" email 
+patternMatching $email $VALIDEMAILPATTERN
+
 
