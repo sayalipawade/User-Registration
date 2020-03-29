@@ -1,9 +1,10 @@
 #!/bin/bash -x
 echo "welcome"
 
-
+#constants
 VALIDPATTERN="^[A-Z][a-z]{2,}$"
 VALIDEMAILPATTERN="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
+VALIDMOBILENO="^((\+){1}91){1}[1-9]{1}[0-9]{9}$"
 
 function patternMatching()
 {
@@ -27,4 +28,7 @@ patternMatching $lastName $VALIDPATTERN
 read -p "Enter email Id:" email 
 patternMatching $email $VALIDEMAILPATTERN
 
+#checking pattern for mobile format
+read -p "Enter Mobile No:" mobile
+patternMatching $mobile $VALIDMOBILENO
 
