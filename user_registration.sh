@@ -4,12 +4,12 @@ echo "welcome"
 #constants
 VALIDPATTERN="^[A-Z][a-z]{2,}$"
 
-read -p "Enter first name:" firstName
+read -p "Enter last name:" lastName
 
-if [[ $firstName =~ $VALIDPATTERN ]]
+if [[ $lastName =~ $VALIDPATTERN ]]
 then
-	echo "Valid first name"
+	echo "Valid last name"
 else
-	echo "Not valid first name"
+	echo "Not valid last name"
 fi
 
